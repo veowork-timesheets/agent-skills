@@ -1,0 +1,7 @@
+{
+  "name": "veowork-timesheets-agent-skills",
+  "private": true,
+  "scripts": {
+    "release": "bash scripts/release.sh"
+  }
+}
