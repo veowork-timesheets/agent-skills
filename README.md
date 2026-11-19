@@ -1,9 +1,11 @@
 # VeoWork Timesheets Agent Skills
 
-Agent skills for logging time, reviewing timesheets, and managing approvals through the VeoWork Timesheets MCP server.
+[VeoWork Timesheets](https://marketplace.visualstudio.com/items?itemName=VeoWork.timesheets) is an Azure DevOps extension for time tracking, timesheet approvals, budgets, and reporting. Your team can enter time in calendar and timesheet views or connect an AI assistant to help prepare and review timesheets. [Learn more about VeoWork Timesheets](https://veowork.io/).
 
-- [Log time](skills/veowork-log-time/SKILL.md) helps you find Azure DevOps work items and record or correct your personal time.
-- [Timesheet approvals](skills/veowork-timesheet-approvals/SKILL.md) helps you review and submit your own timesheets, withdraw submissions, and review or act on employee timesheets when your role allows it.
+These skills use VeoWork’s Model Context Protocol (MCP) server. Your AI assistant follows saved VeoWork instructions and works within your existing permissions.
+
+- [Log time](skills/veowork-log-time/SKILL.md) helps you find the work items you were active on and fill gaps in your timesheet while preserving the time you already logged.
+- [Timesheet approvals](skills/veowork-timesheet-approvals/SKILL.md) helps you review and submit your own timesheets or withdraw a submission. Approval managers can flag entries that need follow-up, approve submissions, or reopen timesheets.
 
 ## Install the skills
 
@@ -80,8 +82,11 @@ See the client guides for [Codex MCP setup](https://learn.chatgpt.com/docs/exten
 ## Try a workflow
 
 - “Log 45 minutes today on Azure DevOps work item 123.”
+- “I worked eight hours yesterday. Find my active work items and help fill the gaps in my timesheet. Keep the time I already logged.”
 - “Review my timesheet for last week.”
-- “Review the timesheets sent to me for approval.”
+- “Review last week’s timesheets sent to me for approval and flag any entries I should follow up on.”
+
+Watch the [VeoWork demos for time entry and timesheet review](https://veowork.io/#ai-workflows).
 
 ## License and service terms
 
