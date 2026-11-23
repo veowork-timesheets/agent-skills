@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "veowork-timesheets",
+  "version": "2026.11.231",
+  "description": "Log time, review timesheets, and manage approvals through VeoWork Timesheets.",
+  "author": {
+    "name": "Drudewerk UG (haftungsbeschränkt)"
+  },
+  "homepage": "https://veowork.io/",
+  "repository": "https://github.com/veowork-timesheets/agent-skills",
+  "license": "MIT"
+}

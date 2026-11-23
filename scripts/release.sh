@@ -4,7 +4,7 @@ set -euo pipefail
 repository=veowork-timesheets/agent-skills
 tag_pattern='^v[1-9][0-9]{3}\.([1-9]|1[0-2])\.([1-9]|[12][0-9]|3[01])[0-9]$'
 origin_pattern="^(https://github\.com/|git@github\.com:|ssh://git@github\.com/)$repository(\.git)?$"
-usage='Usage: npm run release -- v2026.11.191'
+usage='Usage: npm run release -- v2026.11.231'
 
 fail() {
   printf '%s\n' "$*" >&2
@@ -28,6 +28,11 @@ command -v gh >/dev/null || fail 'Install GitHub CLI before releasing.'
 [[ $(git symbolic-ref --quiet --short HEAD) == main ]] || fail 'Switch to main before releasing.'
 worktree_status=$(git status --porcelain)
 [[ -z $worktree_status ]] || fail 'Commit your changes before releasing.'
+
+release_version=${release_tag#v}
+plugin_version=$(node -p 'require("./plugin.json").version')
+[[ $plugin_version == "$release_version" ]] ||
+  fail "Set the version in plugin.json to $release_version before releasing (found $plugin_version)."
 
 fetch_url=$(git remote get-url --all origin)
 push_url=$(git remote get-url --push --all origin)
