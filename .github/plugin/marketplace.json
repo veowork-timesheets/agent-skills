@@ -1,0 +1,13 @@
+{
+  "name": "veowork-timesheets",
+  "owner": {
+    "name": "Drudewerk UG (haftungsbeschränkt)"
+  },
+  "plugins": [
+    {
+      "name": "veowork-timesheets",
+      "description": "Log time, review timesheets, and manage approvals through VeoWork Timesheets.",
+      "source": "./"
+    }
+  ]
+}

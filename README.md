@@ -7,6 +7,11 @@ These skills use VeoWork’s Model Context Protocol (MCP) server. Your AI assist
 - [Log time](skills/veowork-log-time/SKILL.md) helps you find the work items you were active on and fill gaps in your timesheet while preserving the time you already logged.
 - [Timesheet approvals](skills/veowork-timesheet-approvals/SKILL.md) helps you review and submit your own timesheets or withdraw a submission. Approval managers can flag entries that need follow-up, approve submissions, or reopen timesheets.
 
+## Choose your setup
+
+- For **Codex**, **Claude Code**, or a manual setup, [install the skills](#install-the-skills) and [connect to VeoWork](#connect-to-veowork).
+- For **GitHub Copilot**, [install the VeoWork Timesheets plugin](docs/github-copilot.md) to get both skills and the MCP connection in VS Code, the CLI, or the desktop app.
+
 ## Install the skills
 
 Choose one method and run the command for your client. Both CLI installers make the skills available across your projects.
@@ -68,12 +73,7 @@ For Claude Code, add the endpoint, then open a session and use `/mcp` to authent
 claude mcp add --transport http --scope user veowork https://mcp.veowork.io/mcp
 ```
 
-In GitHub Copilot for VS Code, add the endpoint from the Command Palette.
-
-1. Open a workspace and select **Copilot** as the session target in Chat.
-2. Run **MCP: Add Server** from the Command Palette. Choose **HTTP (HTTP or Server-Sent Events)** and enter `https://mcp.veowork.io/mcp`.
-3. Enter `veowork` as the server ID. Choose **Global**, then **Copilot Global** if prompted.
-4. Open a new Copilot chat and ask, “Use VeoWork to review my timesheet for last week.” Follow any prompts to start the server and sign in, then confirm that Copilot calls a VeoWork tool.
+For GitHub Copilot in VS Code, follow the [manual MCP setup](docs/github-copilot.md#manual-mcp-setup-in-vs-code).
 
 When the browser opens, sign in with Microsoft and select the Azure DevOps organization you want to use. Each connection is scoped to one organization. Your VeoWork permissions determine which timesheets and actions are available. Start a new session after installing the skills.
 
